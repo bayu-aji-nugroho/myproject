@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb} 
+\title{peluang}
+\author{bayu aji nugroho}
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item \textbf{aturan pejumlahan dan perkalian}
+    \begin{enumerate}
+        \item aturan penjumlahan\\
+        rumus: $$ n_1 + n_2 + \dots + n_k $$ 
+        \item aturan perkalian\\
+        rumus $$ n_1 \times n_2 \times \dots \times n_k $$
+    \end{enumerate}
+    \item \textbf{faktorial}
+    \\ notasi faktorial adalah $n!$ dengan n adalah bilangan asli \\ faktorial didefinisikan sebagai berikut
+    $$ n! = (n-1)\times (n-2) \times \dots \times 2 \times 1$$ \\ atau
+    $$ n! = \prod_{i=1}^{n} i$$
+    contoh
+    \begin{enumerate}
+        \item $5! = 5\times 4 \times 3 \times 2 \times 1$
+        \item $3! = 3\times 2\times 1$
+    \end{enumerate}
+    \newpage
+    \item \textbf{permutasi dan kombinasi}
+    \begin{enumerate}
+        \item permutasi\\
+        misal ada angka 1,2,3,4 berapakah cara membuat 2 digit angka dari  angka angka itu jika angka tidak boleh sama?\\
+        
+        \begin{tabular}{|c|c|}
+            \hline
+            4&3  \\
+            \hline
+            \end{tabular}
+            \\ \\
+        di baris 1 kolom 1 ada 4 angka yang bisa di masukkan dan di kolom ke 2
+        hanya 3 karena satu angka sudah ada di kolom pertama 
+        $$1 = {(1,2),(1,3),(1,4)}$$
+        $$2 = {(2,1),(2,3),(2,4)}$$
+        $$3 = {(3,1),(3,2),(3,4)}$$
+        $$4 = {(4,1),(4,2),(4,3)}$$
+
+        jika kita lihat ini sama dengan konsep perkalian dimana di kasus ini adalah $4\times 3$
+        jadi banyak nya cara untuk menyusun angka 2 digit dari 4 angka itu adalah 12 cara\\
+        bagaimana cara menghubungkannya dengan faktorial?\\
+        $$4\times3 = \frac{4\times 3 \times 2 \times 1}{2\times 1} = \frac{4!}{2!} = \frac{4!}{(4-2)!}$$
+        jadi jika 4 adalah banyaknya angka atau n dan 2 adalah
+        banyaknya kotak  maka 
+        $$\frac{n!}{(n-k)!}$$
+        ini lah yang kita sebut sebagai permutasi jadi permutasi k unsur dari n unsur adalah
+        $$P(n,k) = P_k^n = nPk = \frac{n!}{(n-k)!}$$
+        \item permutasi berulang\\
+        kita ambil kasus tadi tetapi angka boleh diulang maka yang terjadi adalah
+        $$1 = {(1,1)(1,2),(1,3),(1,4)}$$
+        $$2 = {(2,1),(2,2),(2,3),(2,4)}$$
+        $$3 = {(3,1),(3,2),(3,3),(3,4)}$$
+        $$4 = {(4,1),(4,2),(4,3),(4,4)}$$
+        \newpage
+        ini sama aja dengan $4\times 4$ atau $4^2$ jadi rumus umum untuk permutasi berulang adalah
+        $$P(n,k) = n^k$$
+        \item permutasi dengan unsur yang sama \\
+        jika ada n unsur dimana n unsur tiru berisi $n_1$ unsur yang sama d
+        dan $n_2$ unsur lain yang sama juga dan seterusnya sampai k maka
+        $$P(n:n_1,n_2,\dots,n_k) = \frac{n!}{n_1!\times n_2!\times \dots \times n_k!}$$
+        \item permutasi siklis \\ 
+        adalah permutasi yang disusun melingkar
+        $$p_s (n) = (n-1)!$$
+    \end{enumerate}
+    \item \textbf{Combinasi}\\
+    bisa dijabarkan tapi malas(: \\
+    intinya jika kita merujuk masalah pertama maka urutan yang beda itu sama contoh
+    12 = 21
+    $$C(n,k) = \frac{n!}{(n-k)!\times k!}$$
+    \item \textbf{peluang}
+    \begin{enumerate}
+        \item ruang sempel\\
+        adalah banyak cara kejadian dilakukan notasi $n(S)$
+        \item peluang
+        $$P(A)= \frac{n(A)}{s(A)}$$
+        \begin{enumerate}
+            \item A = kejadian A 
+            \item P(A) = peluang kejadian A terjadi
+            \item n(A) = banyak cara agar peluang A terjadi
+            \item n(S) = banyaknya kemungkinan yang terjadi
+        \end{enumerate}
+        \item kejadian majemuk
+        adalah kejadian 2 himpunan yang beriris dan selalu berlaku
+        $$P(A \cup B ) = P(a)+P(B) - P(A \cap B)$$
+        \begin{enumerate}
+            \item kejadian saling lepas\\
+            adalah kejadian yang tidak bisa terjadi bersama sama atau 2 himpunan yang tidak teriris
+            karna tidak teriris maka $P(A\cap B) = 0$ dan karna terpisah maka
+            $$P(A \cup B) = P(A) + P(B)$$
+        \end{enumerate}
+        \item kejadian saling bebas
+        \\ adalah kejadian yang tidak saling mempengaruhi
+        $$P(A\cap B) = P(A)\times P(B)$$
+        
+    \end{enumerate}
+\end{enumerate}
+\end{document}
